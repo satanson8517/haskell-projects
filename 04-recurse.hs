@@ -26,7 +26,9 @@ maximum' (x:xs)
 				return input[0];
 			}
 
-			return (input[0] > input[1]) ? input[0] : max(tail(input));
+			int maxTail = max(tail(input));
+
+			return (input[0] > maxTail) ? input[0] : maxTail;
 		}
 
 		private static int[] tail(int[] input) {
