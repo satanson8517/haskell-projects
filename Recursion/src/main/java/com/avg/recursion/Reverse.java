@@ -16,12 +16,11 @@ public class Reverse implements Runnable {
 		System.out.println(reverse(input));
 	}
 
-	private static List<String> reverse(Integer[] input) {
-		final int POS = 0;
-		return reverse(input, POS);
+	static List<String> reverse(Object[] input) {
+		return reverse(input, 0);
 	}
 
-	private static List<String> reverse(Integer[] input, int pos) {
+	private static List<String> reverse(Object[] input, int pos) {
 		if (input == null || input.length == 0 || pos == input.length) {
 			return new ArrayList<>();
 		}
