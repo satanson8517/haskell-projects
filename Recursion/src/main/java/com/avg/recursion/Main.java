@@ -7,7 +7,7 @@ package com.avg.recursion;
 public class Main {
 	
 	public static void main(String[] args) {
-		Runnable run = new Zip();
+		Runnable run = new Elem();
 		run.run();
 	}
 	
