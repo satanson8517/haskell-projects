@@ -7,7 +7,7 @@ package com.avg.recursion;
 public class Main {
 	
 	public static void main(String[] args) {
-		Runnable run = new Elem();
+		Runnable run = new Quicksort();
 		run.run();
 	}
 	
