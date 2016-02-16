@@ -4,7 +4,7 @@ package com.avg.recursion;
  *
  * @author Michal Nedbálek <michal.nedbalek@avg.com> on 16/02/2016
  */
-public class MaxOfArray implements Runnable {
+public class Maximum implements Runnable {
 
 	private static final int[] input = {1, 3, 0, 7, 5};
 
