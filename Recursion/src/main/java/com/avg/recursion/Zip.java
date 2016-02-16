@@ -9,8 +9,11 @@ import java.util.List;
  */
 public class Zip implements Runnable {
 
-	private static final int[] input1 = {1, 2, 3, 4, 5};
-	private static final int[] input2 = {1, 2, 3};
+//	private static final int[] input1 = {1, 2, 3, 4, 5};
+//	private static final int[] input2 = {1, 2, 3};
+	
+	private static final String[] input1 = {"a", "b", "c"};
+	private static final String[] input2 = {"a", "b", "c", "d", "e"};
 
 	@Override
 	public void run() {
@@ -21,11 +24,11 @@ public class Zip implements Runnable {
 		);
 	}
 
-	private static List<Doublette> zip(int[] input1, int[] input2) {
+	private static List<Doublette> zip(Object[] input1, Object[] input2) {
 		return zip(input1, input2, 0);
 	}
 
-	private static List<Doublette> zip(int[] input1, int[] input2, int pos) {
+	private static List<Doublette> zip(Object[] input1, Object[] input2, int pos) {
 		if (input1 == null || input2 == null
 				|| input1.length == 0 || input2.length == 0
 				|| pos == input1.length || pos == input2.length) {
@@ -38,12 +41,12 @@ public class Zip implements Runnable {
 		return output;
 	}
 
-	private static class Doublette {
+	private static class Doublette<F, S> {
 
-		private final int first;
-		private final int second;
+		private final F first;
+		private final S second;
 
-		public Doublette(int first, int second) {
+		public Doublette(F first, S second) {
 			this.first = first;
 			this.second = second;
 		}
